@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- custom css -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main
+      class="bg-[#1e1e1e] h-screen bg-[url(./images/background.png)] bg-no-repeat bg-center"
+    >
+      <section
+        id="home-screen"
+        class="flex justify-center items-center min-h-screen"
+      >
+        <div class="text-white text-center space-y-4">
+          <h1 class="text-9xl font-anton">ALPHABET CLASH</h1>
+          <p class="font-poppins text-2xl font-medium">
+            Unleash Your Keyboard Kung Fu : Press “Enter” to Play
+          </p>
+          <button
+            id="play-start-btn"
+            onclick="play()"
+            class="btn text-xl py-2 font-bold font-poppins"
+          >
+            Play Now
+          </button>
+        </div>
+      </section>
+      <section
+        id="play-ground"
+        class="hidden flex items-center justify-center h-screen"
+      >
+        <div class="w-full md:w-[70%] mx-auto space-y-6">
+          <div
+            class="font-poppins border-[20px] rounded-2xl border-[#010313cc] bg-[#ffffffb3] h-80 mx-auto"
+          >
+            <div class="bg-[#2f2941] py-2 px-4 rounded-b-xl w-fit mx-auto">
+              <p class="text-center text-white text-lg">
+                Don't watch keyboard while playing...
+              </p>
+            </div>
+            <div class="flex h-[85%] items-center justify-center">
+              <h1 id="screen-letter" class="text-5xl">Y</h1>
+            </div>
+          </div>
+          <div class="font-inter space-y-3">
+            <div class="flex text-xl justify-center gap-1 my-1 w-full">
+              <kbd id="q" class="kbd">q</kbd>
+              <kbd id="w" class="kbd">w</kbd>
+              <kbd id="e" class="kbd">e</kbd>
+              <kbd id="r" class="kbd">r</kbd>
+              <kbd id="t" class="kbd">t</kbd>
+              <kbd id="y" class="kbd">y</kbd>
+              <kbd id="u" class="kbd">u</kbd>
+              <kbd id="i" class="kbd">i</kbd>
+              <kbd id="o" class="kbd">o</kbd>
+              <kbd id="p" class="kbd">p</kbd>
+            </div>
+            <div class="flex text-xl justify-center gap-1 my-1 w-full">
+              <kbd id="a" class="kbd">a</kbd>
+              <kbd id="s" class="kbd">s</kbd>
+              <kbd id="d" class="kbd">d</kbd>
+              <kbd id="f" class="kbd">f</kbd>
+              <kbd id="g" class="kbd">g</kbd>
+              <kbd id="h" class="kbd">h</kbd>
+              <kbd id="j" class="kbd">j</kbd>
+              <kbd id="k" class="kbd">k</kbd>
+              <kbd id="l" class="kbd">l</kbd>
+            </div>
+            <div class="flex text-xl justify-center gap-1 my-1 w-full">
+              <kbd id="z" class="kbd">z</kbd>
+              <kbd id="x" class="kbd">x</kbd>
+              <kbd id="c" class="kbd">c</kbd>
+              <kbd id="v" class="kbd">v</kbd>
+              <kbd id="b" class="kbd">b</kbd>
+              <kbd id="n" class="kbd">n</kbd>
+              <kbd id="m" class="kbd">m</kbd>
+            </div>
+          </div>
+          <div
+            class="bg-cover text-xl font-bold font-inter flex justify-between"
+          >
+            <button
+              class="btn bg-[#894189] border-none rounded-full text-white hover:bg-[#360490]"
+            >
+              Life <img src="./images/Group 23.png" alt="heart icon" />
+              <span id="current-life">5</span>
+            </button>
+            <button
+              class="btn bg-[#360490] border-none rounded-full text-white hover:bg-[#894189]"
+            >
+              Score <img src="./images/icon2.svg" alt="Icon 2" />
+              <span id="current-score">0</span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section
+        id="score"
+        class="hidden h-screen flex justify-center items-center"
+      >
+        <div
+          class="bg-[#ffffff8f] border py-11 px-12 rounded-2xl text-center space-y-5"
+        >
+          <h1 class="text-6xl text-white">
+            <span class="font-bold">Score</span> :
+            <span id="final-score" class="font-medium">1</span>
+          </h1>
+          <button
+            onclick="play()"
+            class="btn text-xl px-6 py-2 rounded-xl bg-white font-bold"
+          >
+            Play Again
+          </button>
+          <p class="text-xl">Practice will make you Pro</p>
+        </div>
+      </section>
+    </main>
+    <script src="scripts/utility.js"></script>
+    <script src="scripts/alpha-clash.js"></script>
+  </body>
+</html>
